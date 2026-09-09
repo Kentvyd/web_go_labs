@@ -1,2 +1,2 @@
-# web-go-labs
+# web_go_labs
 веб-разработка 3курс
