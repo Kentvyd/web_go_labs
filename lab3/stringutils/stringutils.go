@@ -1,0 +1,12 @@
+package stringutils
+
+// Reverse переворачивает строку s.
+// Строка сначала преобразуется в срез рун ([]rune), а не байт,
+// чтобы корректно обрабатывать многобайтовые символы (например, кириллицу).
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
